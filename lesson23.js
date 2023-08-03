@@ -42,3 +42,24 @@ console.log(getArrayStudents(students));
 //   { name: 'A', score: 100 },
 //   { name: 'E', score: 75 }
 // ]
+
+const listTitle = [
+  "Blue ",
+  "Green",
+  "Red",
+  "Orange",
+  "Violet",
+  "Indigo",
+  "Yellow ",
+];
+// question 3 : Sort an array alphabetically
+function sortAlphabet(arr) {
+  return arr.sort((a, b) => a.localeCompare(b));
+}
+console.log(sortAlphabet(listTitle));
+// result [
+//     'Blue ',   'Green',
+//     'Indigo',  'Orange',
+//     'Red',     'Violet',
+//     'Yellow '
+//   ]
