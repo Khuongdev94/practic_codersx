@@ -36,6 +36,7 @@ function getAllKeys(arr) {
   for (let key in arr) {
     if (typeof key == "object") {
       keys.push(key);
+      getAllKeys(key);
     } else {
       keys.push(key);
     }
