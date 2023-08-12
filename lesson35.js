@@ -88,10 +88,10 @@ const apartment = {
 
 function getAllKeys(object, objAcc) {
   let objKey = objAcc || [];
-  for (let key in obj) {
-    if (typeof obj[key] == "object") {
+  for (let key in object) {
+    if (typeof object[key] == "object") {
       objKey.push(key);
-      getAllKeys(obj[key], objKey);
+      getAllKeys(object[key], objKey);
     } else {
       objKey.push(key);
     }
@@ -124,3 +124,18 @@ function factorial(n) {
   return n * factorial(n - 1);
 }
 console.log(factorial(4));
+
+function isWeekend(dateString) {
+  let date = new Date(dateString);
+  const day = date.getDay();
+  console.log(day);
+  if (day == 0 || day == 6) return true;
+  return false;
+}
+console.log(isWeekend("2023/08/12"));
+
+function diffMs(a, b) {
+  return (new Date(b).getTime() - new Date(a).getTime()) / 3600 / 24 / 1000;
+}
+
+console.log("2023/80/14", "2023/80/19");
